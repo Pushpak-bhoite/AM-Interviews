@@ -5,8 +5,8 @@ import React from 'react';
 
 import { useState } from "react";
 
-export function App(props) {
-   const [count, setCount] = useState(0);
+export function Test1(props) {
+  const [count, setCount] = useState(0);
   const [text, setText] = useState("");
 
   console.log("Component re-rendered");
@@ -21,7 +21,10 @@ export function App(props) {
   console.log("cnt", count);
   return (
     <div className='App'>
-     <button onClick={handleClick}>Click me</button>
+      <button onClick={handleClick}>Click me -> {text} {count}</button>
     </div>
   );
 }
+
+
+

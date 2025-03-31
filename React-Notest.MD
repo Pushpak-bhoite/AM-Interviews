@@ -290,3 +290,10 @@ Fiber(App)
 
 -The hooks fields are also linked to each other in the Circular Linked-List Format.
 * Fiber reconciliation algorithm has programmed render phase from parent to child but commit phase childs to parent so that the reason useEffect's callback runs first and then parent's.
+
+
+------------------------------
+dis-advantages of V-DOM: 
+ Is we always need to carry v-dom and if there is heavy computation then, firstly computation firstly happens to V-DOM, eventually it also leads to performance implifications.
+
+Signals - This concept has just invented to bypass the V-DOM.           It directly updates DOM   

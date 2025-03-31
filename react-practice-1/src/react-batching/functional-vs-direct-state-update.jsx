@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useState } from "react";
 
-export function App(props) {
+export function Test2(props) {
     const [count, setCount] = useState(0);
 
     /*direct state update*/ 
@@ -23,8 +23,8 @@ export function App(props) {
     console.log('cnt', count)//3
     return (
         <div className='App'>
-            <button onClick={handleClick}>Count: {count}</button>;
-            <button onClick={handleClick2}>Count: {count}</button>;
+            {/* <button onClick={handleClick}>Count: {count}</button>; */}
+            <button onClick={handleClick2}>Count: {count}</button>
         </div>
     );
 }
