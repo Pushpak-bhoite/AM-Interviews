@@ -54,3 +54,6 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+
+// https://chatgpt.com/c/67e90011-2300-800d-ae3c-a2dc770f9c9d
