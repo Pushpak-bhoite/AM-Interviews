@@ -6,7 +6,7 @@ SSR - react can be used for server-side-rendering.
 Virtual DOM - is an in-memory representation of the actual DOM
 ,react uses to optimise process updation and rerendering.
 Diffing Alg - compares current and previous version of V-DOM.
-declarative approach - it lets you focus on what the UI should look like, instead manuallyupdating DOM(imperative approach).
+declarative approach - it lets you focus on what the UI should look like, instead manually updating DOM(imperative approach).
 Transpiler(babel) - using this browser reads JSX 
 
 Props(properties):
@@ -29,41 +29,9 @@ Life Cycle Methods Of Component:
 Fragment: when we are trying to render more than one root element we use this or div
 
 Custom Hook: to reuse stateful logic across components
-
-
-
----------------
-
-
-
-React :
-SAP- single page application
-MVC-used to build reusable components for view layer.
-Virtual DOM - creates virtual DOM for fast updation and minimizes DOM manipulation.
-SSR - react can be used for server-side-rendering.
-Virtual DOM - is an in-memory representation of the actual DOM
-,react uses to optimise process updation and rerendering.
-Diffing Alg - compares current and previous version of V-DOM.
-declarative approach - it lets you focus on what the UI should look like, instead manuallyupdating DOM(imperative approach).
-Transpiler(babel) - using this browser reads JSX 
-Props(properties):
-HOC(Higher Order component): 
-- method of reusing pure component and returns enhanced component.
-One Way Data Binding:
-- data has one way flow, child component can't update data. 
-Pure Component:
-- is a type of React component that only re-renders if the props or state it receives change.
-Life Cycle Methods Of Component:
-- Initialization, Mounting, Updating, Unmounting.
- Hooks:
-- a new addition in React 16.8. They let developers use state and other React features without writing a class.
-Fragment: when we are trying to render more than one root element we use this or div
-Custom Hook: to reuse stateful logic across components
-
 
 
 ------------------
-
 
 
 HTML:
@@ -82,8 +50,6 @@ DOCTYPE (document type declaration ) - tells the browser in which version of the
 
 -------------------
 
-
-
 Lazy loading:
 - Only loads those components which are need to load. 
 -Next JS has this built in optimization.
@@ -93,8 +59,6 @@ Suspense - is a wrapper for lazy components, fallback is important <suspense fal
 
 
 ------------
-
-
 
 Batching:
 -optimization technique, improves performance
@@ -157,17 +121,17 @@ On re-renders, React retrieves the stored state instead of re-initializing it.
 Fiber:
 - is React's internal engine
 Reconciliation:
-- is the process React uses to compare the previous and new Virtual DOM trees and determine what needs to change in the actual DOM.
+- is the process React uses to compare the previous and new Virtual DOM trees and determine what needs to change in the actual DOM. 
 Diffing Algorithm:
 - is the core part of the reconciliation process that determines what parts of the Virtual DOM have changed.
 
---------------
+-----------------
 
 
 Need of Keys in React:
 -They help React efficiently identify which items changed, were added, or removed.
 -When React renders a list, it compares the new list with the previous one to update only the changed items.
--If keys are missing, React relies on index-based reconciliation( so that's the reason avoid using index as key, it can break UI consistency when items are reordered or deleted.), which can lead to performance issues and UI inconsistencies.
+-If keys are missing, React relies on index-based reconciliation( so that's the reason avoid using index as key, it can break UI consistency when items are reordered or deleted.), which can lead to performance issues and UI inconsistencies. 
 -Without Keys:
    React removes all items and re-renders everything.
    Causes visual glitches like input field losing focus.
@@ -186,15 +150,14 @@ componentWillUnmount (Runs when the component unmounts)
 - without dependancy array useEffect function gonna run each time which is eventually(ComponentDidMount).
  
 
-
  -------------------
  
  
  
  React Phases:
-1.render phase - creation of v-DOM and useEffects registering (useEffects dont get executed imidiately, they gets registered in an internal queue for later execution) & useState initializations ( user see Blank page still in this phase ).
+1. render phase - creation of v-DOM and useEffects registering (useEffects dont get executed imidiately, they gets registered in an internal queue for later execution) & useState initializations ( user see Blank page still in this phase ).
 
-Commit Phase == DOM-updation is same:
+2. Commit Phase == DOM-updation is same:
 the moment when-
   The JSX elements declared in your component become real HTML elements in the browser.
   The screen is painted, meaning the user now sees the UI.
@@ -261,7 +224,6 @@ React starts rendering, but it can pause if needed.
  If a high-priority task happens (like a button click during rendering)
 React pauses rendering, handles the event, and resumes later.
 
-
 ----------
 
 Fiber Tree Structure (First Render) with useStates and useEffects:
@@ -289,7 +251,7 @@ Fiber(App)
           ]
 
 -The hooks fields are also linked to each other in the Circular Linked-List Format.
-* Fiber reconciliation algorithm has programmed render phase from parent to child but commit phase childs to parent so that the reason useEffect's callback runs first and then parent's.
+* Fiber reconciliation algorithm has programmed render phase from parent to child but commit phase childs to parent so that the reason useEffect's callbacks of childs run first and then parent's.
 
 
 ------------------------------
@@ -297,3 +259,45 @@ dis-advantages of V-DOM:
  Is we always need to carry v-dom and if there is heavy computation then, firstly computation firstly happens to V-DOM, eventually it also leads to performance implifications.
 
 Signals - This concept has just invented to bypass the V-DOM.           It directly updates DOM   
+
+---------------------------
+HOC :
+A Higher-Order Component (HOC) is a function that takes a component as input and returns a new enhanced component. It helps in code reusability and modifying behavior without changing the original component.
+-Follows the DRY Principle (Don’t Repeat Yourself)
+Ex:
+
+import React from "react";
+import Dashboard from "./Dashboard";
+
+function App() {
+  return <Dashboard user="John Doe" />;  // Passing user as a prop
+}
+
+export default App;
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+import React from "react";
+import withAuth from "./withAuth";
+
+const Dashboard = ({ user }) => {
+  return <h1>Welcome, {user}!</h1>;
+};
+
+export default withAuth(Dashboard);
+\\\\\\\\\\\\\\\\\\\\\\\
+import React from "react";
+
+const withAuth = (WrappedComponent) => {
+  return (props) => {
+    const isAuthenticated = true; // Assume user is logged in
+
+    return isAuthenticated ? <WrappedComponent {...props} /> : <h2>Access Denied</h2>;
+  };
+};
+
+export default withAuth;
+\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+------------REDUX----------
+UI triggers an Action -> Action goes to the Reducer -> Reducer updates the Store -> UI gets updated from the Store
