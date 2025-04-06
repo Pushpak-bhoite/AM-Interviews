@@ -1,0 +1,67 @@
+import React, { useState } from 'react';
+import Editor from 'react-simple-code-editor';
+import { highlight, languages } from 'prismjs/components/prism-core';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/themes/prism.css';
+import { useState } from 'react';
+
+export default function App() {
+  const [inputs, setInputs] = useState({});
+  const [items, setItems] = useState([]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const newItem = {
+      id: Date.now().toString(),
+      name: inputs.name,
+      age: inputs.age,
+    };
+    setItems((prev) => [...prev, newItem]);
+    setInputs({ name: '', age: '' });
+  }
+  function handleDelete(id) {
+    setItems((prev) => prev?.filter((item) => item.id !== id));
+  }
+  console.log(items);
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">name</label>
+          <input
+            name="name"
+            value={inputs.name}
+            onChange={(e) =>
+              setInputs((prev) => ({ ...prev, name: e.target.value }))
+            }
+          />
+        </div>
+        <div>
+          <label htmlFor="age">age</label>
+          <input
+            name="age"
+            value={inputs.age}
+            onChange={(e) =>
+              setInputs((prev) => ({ ...prev, age: e.target.value }))
+            }
+          />
+        </div>
+        <button type="submit"> submit</button>
+      </form>
+      <div>
+        <ul>
+          {items?.map((item) => {
+            return (
+              <li className="d-flex">
+                <span>{item?.name + ' '}</span>
+                <span>{item?.age + ' '}</span>
+                <button onClick={() => handleDelete(item?.id)}>delete</button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+}

@@ -1,5 +1,6 @@
 // Write a program where user can perform operations add item, show list, delete, search and filter 
-
+// What i couldn't make is Exceptional Handling, JSX full form, 
+// what asked - controlled uncontrolled, how can you add style, redux, 
 
 import React, { useState } from 'react';
 import Editor from 'react-simple-code-editor';
@@ -36,7 +37,7 @@ export default function App() {
     setSearch(e.target.value);
     setSearchItems(items.filter((item) => item.includes(e.target.value)));
   }
-console.log(search)
+  console.log(search)
   return (
     <div>
       <form onSubmit={addItem}>
@@ -47,7 +48,7 @@ console.log(search)
         <label htmlFor="">Searching</label>
         <input value={search} onChange={searchingFunc} type="text" />
       </div>
-      {!search  && (
+      {!search && (
         <ul>
           {items?.map((item, index) => {
             return (
