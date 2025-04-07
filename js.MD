@@ -106,7 +106,7 @@ ECMA6 - 2015
 ex: function greet(name = "Guest") {
 
 }
-6. IIFE 
+6. IIFE                                                  
 
 -----------------------------
 JSON - is data format.
@@ -125,7 +125,6 @@ unary functions:
 A unary function is a function that takes exactly one argument.
 Some methods (like map) often use unary functions:
 [1, 2, 3].map(x => x * 2); // `x => x * 2` is a unary function
-
 
 ------------------------------------------------------------------------
 
@@ -147,17 +146,32 @@ never
 
 
 Situation	                Use interface ✅	            Use type ✅
-Object with structure	        ✔️	                           ✔️
+
+Object with structure	        ✔️	                        ✔️
 Extending with extends	    ✔️ Clean and readable	            Can use & (intersection)
 Union / primitives	            ❌ Not allowed	            ✔️ Allowed
-Functions / complex types	❌ Not ideal	                    ✔️ More flexible
+Functions / complex types	      ❌ Not ideal	              ✔️ More flexible
 
+Output in JS                Enum: Generates JS code            Union: Gets erased after compilation
 
 Class : A class in TypeScript is a blueprint for creating objects,- supports object-oriented features
 interface : An interface defines the structure of an object — it’s like a contract for objects, specifying required properties or method signatures, without implementation.
 
 A type alias: lets you give a name to any type — objects, primitives, unions, functions, etc.
 It’s more flexible than interface.
+
+--------------------------HOF-------------------------
+Higher Order Function:
+A Higher-Order Function is a function that does at least one of the following:
+1. Takes another function as an argument.
+2. Returns a function as its result.
+Ex: map, filter, reduce, forEach also are higher order function bcoz they take anonymous function
+
+Real Scenario: filtering product or items of array using filter function which takes an function and returns new arry 
+
+
+
+
 
 
 
