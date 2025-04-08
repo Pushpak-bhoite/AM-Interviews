@@ -6,6 +6,7 @@ import ReusableTable2 from './reusable-table-2/App'
 import Hoc from './HOC'
 import HOCpractice from './HOC-practice'
 import CustomHook from './custom-hook'
+import ReduxSetUp from './redux'
 function App() {
 
   return (
@@ -17,9 +18,10 @@ function App() {
         {/* <ReusableTable /> */}
         {/* <ReusableTable2 /> */}
         {/* <Hoc /> */}
-         {/*Higher order component */}
+        {/*Higher order component */}
         {/* <HOCpractice /> */}
-        <CustomHook />
+        {/* <CustomHook /> */}
+        <ReduxSetUp />
         {/* </Provider> */}
       </div>
     </>

@@ -171,7 +171,8 @@ Real Scenario: filtering product or items of array using filter function which t
 
 
 
-
+---------------- Event Driven ----------------
+Event-driven programming means: Don’t call the function — let the event do it for you.
 
 
 
