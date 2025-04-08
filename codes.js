@@ -1,3 +1,8 @@
+// Both  + and - has the same priority whichever comes first in code from left to right executes first. Same for * & /
+// Operator	Precedence	Associativity
+// *, /         14	        Left → Right
+// +, -	        13	        Left → Right
+
 'o9'-3
 NaN
 'o9'-'oo'

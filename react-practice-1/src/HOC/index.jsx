@@ -1,4 +1,4 @@
-// A pure React component returns the same output for the same input props and doesn't 
+  // A pure React component returns the same output for the same input props and doesn't 
 // cause side effects during rendering. While you can use hooks like useState or useEffect in function components,
 //  the term 'pure component' typically refers to stateless, side-effect-free components used for rendering only.
 

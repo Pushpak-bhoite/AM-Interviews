@@ -3,7 +3,7 @@ SAP- single page application
 MVC-used to build reusable components for view layer.
 Virtual DOM - creates virtual DOM for fast updation and minimizes DOM manipulation.
 SSR - react can be used for server-side-rendering.
-Virtual DOM - is an in-memory representation of the actual DOM
+Virtual DOM - is an in-memory representation of the actual DOM.
 ,react uses to optimise process updation and rerendering.
 Diffing Alg - compares current and previous version of V-DOM.
 declarative approach - it lets you focus on what the UI should look like, instead manually updating DOM(imperative approach).
@@ -47,12 +47,11 @@ Semantic tags: Header, Main Section Article Aside Footer etc.
 DOCTYPE (document type declaration ) - tells the browser in which version of the HTML the document is written.
 
 
-
 -------------------
 
 Lazy loading:
 - Only loads those components which are need to load. 
--Next JS has this built in optimization.
+- Next JS has this built in optimization.
 webpack - used to bundle(following imported files & merge) the react app in minified format.
 work - import components using lazy() method
 Suspense - is a wrapper for lazy components, fallback is important <suspense fallback={<div>loading</div>}>
@@ -134,7 +133,7 @@ Need of Keys in React:
 -If keys are missing, React relies on index-based reconciliation( so that's the reason avoid using index as key, it can break UI consistency when items are reordered or deleted.), which can lead to performance issues and UI inconsistencies. 
 -Without Keys:
    React removes all items and re-renders everything.
-   Causes visual glitches like input field losing focus.
+   Causes visual glitches like input field losing focus. 
 
 
    -------------------
@@ -298,6 +297,11 @@ export default withAuth;
 \\\\\\\\\\\\\\\\\\\\\\\\
 
 
-
 ------------REDUX----------
 UI triggers an Action -> Action goes to the Reducer -> Reducer updates the Store -> UI gets updated from the Store
+
+
+------------ UseCases of custom hooks in React -  --
+1. use For authentication/ Auth Status Checker
+2. Fetch API Data
+3. Dark/Light Theme Toggle
