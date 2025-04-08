@@ -5,6 +5,7 @@ import ReusableTable from './reusable-table/App'
 import ReusableTable2 from './reusable-table-2/App'
 import Hoc from './HOC'
 import HOCpractice from './HOC-practice'
+import CustomHook from './custom-hook'
 function App() {
 
   return (
@@ -16,8 +17,9 @@ function App() {
         {/* <ReusableTable /> */}
         {/* <ReusableTable2 /> */}
         {/* <Hoc /> */}
-        <HOCpractice /> {/*Higher order component */}
-
+         {/*Higher order component */}
+        {/* <HOCpractice /> */}
+        <CustomHook />
         {/* </Provider> */}
       </div>
     </>

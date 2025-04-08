@@ -1,5 +1,5 @@
 // Write a program where user can perform operations add item, show list, delete, search and filter 
-// What i couldn't make is Exceptional Handling, JSX full form, 
+// What i couldn't make is Exceptional Handling, JSX full form, what is event driven architecture.
 // what asked - controlled uncontrolled, how can you add style, redux, 
 
 import React, { useState } from 'react';
