@@ -1,6 +1,7 @@
 // Higher Order Function:
 // A Higher-Order Function is a function that does at least one of the following:
 // 1. Takes another function as an argument.
+// OR
 // 2. Returns a function as its result.
 // Ex: map, filter, reduce, forEach also are higher order function bcoz they take anonymous function
 

@@ -174,6 +174,27 @@ Real Scenario: filtering product or items of array using filter function which t
 ---------------- Event Driven ----------------
 Event-driven programming means: Don’t call the function — let the event do it for you.
 
+-------------------Scopes----------------------
+1. Global Scope
+2. Function Scope       -> variables declared inside function cannt be accessed outside.
+3. Block Scope (ES6+)   -> if else block
+4. Lexical Scope
+5. Module Scope (i.e) : import/export files 
+
+
+  Lexical Scope :
+Lexical scope is what makes 'closures' work in JavaScript:
+
+function outer(){
+      function inner(){
+          hello++
+        console.log(hello)
+    }
+    let hello = 10;
+    return inner
+}
+const x = outer() 
+x()       //o/p => 10
 
 
 

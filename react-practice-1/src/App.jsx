@@ -7,6 +7,7 @@ import Hoc from './HOC'
 import HOCpractice from './HOC-practice'
 import CustomHook from './custom-hook'
 import ReduxSetUp from './redux'
+import HOCpractice3 from './HOC-3'
 function App() {
 
   return (
@@ -21,7 +22,8 @@ function App() {
         {/*Higher order component */}
         {/* <HOCpractice /> */}
         {/* <CustomHook /> */}
-        <ReduxSetUp />
+        {/* <ReduxSetUp /> */}
+        <HOCpractice3 />
         {/* </Provider> */}
       </div>
     </>
