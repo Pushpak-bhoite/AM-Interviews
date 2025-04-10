@@ -88,3 +88,72 @@
 
 // console.log(arr)
 
+
+
+// ----------- prime no array using recursion -------------
+// const arr = [
+//     { number: 4 },   // normal
+//     { number: 7 },   // prime
+//     { number: 10 },  // normal
+//     { number: 13 },  // prime
+//     { number: 18 },  // normal
+//     { number: 17 },  // prime
+//     { number: 20 }   // normal
+//   ];
+//   function isPrime(no){
+//       console.log(no)
+//       if(no===2) return 2
+//       if(no % isPrime(no-1) == 0){
+//           return false
+//       }else{
+//           return true
+//       }
+//   }
+//   const unique = []
+//   for(let i = 0; i< arr.length ; i++){
+//       let flag = isPrime(arr[i].number)
+//       if(flag){
+//           unique.push(arr[i])
+//       }
+//   }
+  
+//   console.log(unique)
+
+
+// ------------shift zeros to end --------------------
+// const arr = [1,0,2,0,3,4,0,5,6]
+// let index = 0
+// for(let i = 0 ; i< arr.length ; i++){
+//     if(arr[i] !== 0){
+//          arr[index] = arr[i]
+//          index++;
+//     }
+// }
+
+// for(let j = index ; j < arr.length; j++){
+//     arr[j] = 0
+// }
+
+// console.log(arr)
+
+// ------------------Majority of element in array (using reduce and for of) ------------
+// const arr = [1,2,2,1,1,2,2,2,3,3,3];
+// let maj = 0 ; 
+// let cnt = 0;
+
+//  const obj = arr.reduce((acc,item,index)=>{
+//    if(!acc[item]){
+//        acc[item]= []
+//    } 
+//    acc[item].push(item)
+//    return acc
+// },{})
+
+// for(let [key,value] of Object.entries(obj)){
+//     if(cnt < value.length){
+//         cnt = value.length
+//         maj= key
+//     }
+// }
+
+// console.log(cnt, maj)
