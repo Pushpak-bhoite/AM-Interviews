@@ -1,4 +1,4 @@
-Yes! let, const, and var are called variable declaration keywords
+let, const, and var are called variable declaration keywords
 
 Spread vs Rest
 
@@ -34,7 +34,7 @@ console.log(newUser); // { name: "John", age: 25, city: "New York" }
 Closures
 Ex - 1: 
 for (var i = 0; i < 3; i++) {
-    (function myFunc(i) {
+    (function myFunc(i) {  //with IIFE function we avoiided Closures
         setTimeout(() => {
             console.log(i)
         }, 1000)
@@ -57,7 +57,7 @@ counter(); // 1
 counter(); // 2
 counter(); // 3 (but `count` is not directly accessible)
 
-- A closure is when a function remembers and accesses variables from its outer scope, even after that scope has finished executing.
+- A closure is when a function remembers and accesses the variables from its outer scope, even after that scope has finished executing.
 -From google: a closure is a function's ability to access variables from its outer (or parent) scope, even after the outer function has finished executing, due to the inner function retaining a reference to that outer scope
 
 -------------------------------
@@ -167,7 +167,7 @@ A Higher-Order Function is a function that does at least one of the following:
 2. Returns a function as its result.
 Ex: map, filter, reduce, forEach also are higher order function bcoz they take anonymous function
 
-Real Scenario: filtering product or items of array using filter function which takes an function and returns new arry 
+Real Scenario: filtering product or items of array using filter function which takes an function and returns new array 
 
 
 
