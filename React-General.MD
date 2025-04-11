@@ -39,3 +39,18 @@ async Operations -not canceling promises
 --------------- Strict mode -------------
 
 "StrictMode is a development tool in React that helps identify side effects, deprecated APIs, and potential issues by double-invoking certain lifecycle methods and hooks. It improves code quality and future-proofs our app, but doesn’t affect production performance."
+
+-------------------About versioning in react ----------------------
+Yes, our insurance project actually has three frontend microservices. The main customer portal is built in React 19, the internal underwriter dashboard is in React 18, and we also have a document management portal built separately. Each of these is deployed independently, and they communicate through shared APIs and sometimes even via module federation. 
+
+1. super Admin & Admin panel portal
+2. Agent and Customers 
+3. Event 
+4. Esign
+
+reat 18 vs 19
+1. Concurrent Rendering establishde in 19 - You're typing in a search box while a big component is rendering
+ -Concurrent rendering allows React to interrupt a render, prioritize urgent updates like input typing, and resume rendering later. It keeps the UI responsive under heavy load.
+
+2. Manual use of memo, useMemo	Smarter memoization under the hood
+3. new hooks - useActionState

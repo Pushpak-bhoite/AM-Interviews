@@ -8,6 +8,7 @@ import HOCpractice from './HOC-practice'
 import CustomHook from './custom-hook'
 import ReduxSetUp from './redux'
 import HOCpractice3 from './HOC-3'
+import UseMemo from './useMemo-useCallback-memo/parent'
 function App() {
 
   return (
@@ -25,12 +26,7 @@ function App() {
         {/* <ReduxSetUp /> */}
         {/* <HOCpractice3 /> */}
 
-        <div class="grid bg-red-400 grid-cols-3 grid-rows-3 h-64 w-full border border-gray-400">
-          <div class="bg-blue-400 col-start-3 row-start-3 p-4 rounded">
-            I'm bottom right
-          </div>
-        </div>
-
+        <UseMemo />
 
       </div>
     </>

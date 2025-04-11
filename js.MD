@@ -167,7 +167,7 @@ A Higher-Order Function is a function that does at least one of the following:
 2. Returns a function as its result.
 Ex: map, filter, reduce, forEach also are higher order function bcoz they take anonymous function
 
-Real Scenario: filtering product or items of array using filter function which takes an function and returns new array 
+Real Scenario: Filtering product or items of array using filter function which takes an function and returns new array.  
 
 
 
