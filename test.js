@@ -47,19 +47,26 @@
 
 
 
-function greet() {
-    function inner() {
-        console.log(x)
-    }
-    let x = 10;
-    inner()
-}
+// function greet() {
+//     function inner() {
+//         console.log(x)
+//     }
+//     let x = 10;
+//     inner()
+// }
 
-const x = greet();
+// const x = greet();
 // x()
 // Output: ["Ram", "Shyam", "Geeta"]
 
 
+const obj = [{type:'number', value:1}, {type:'string', value:'ram'}, {type:'number', value:3}]
+// filter elements which has property 'type' value 'number' . 
+
+const obj1 = [{key:1, value:1}, {key:2, value:'ram'}, {key:1, value:3}, {key:'boolean', value: true}]
+// unique objects having key's value unique. o/p => [{key:1, value:1}, {key:1, value:3}]
+
+// They gave me api to call it in react and render data in table format. api:- https://jsonplaceholder.typicode.com/users
 
 
 
